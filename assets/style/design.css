@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+font-family: 'Poppins','Noto Sans KR' !important;
+}
+
+ul{list-style: none;}
+a { text-decoration:none !important;} 
+html,
+body {
+      position: relative;
+      height: 100%;
+    }
+
+
+    .swiper-container {
+      width: 100%;
+
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      width: 500px !important;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+}
+
+.custom-cursor .circle-cursor{position: fixed; left: 0; top: 0; pointer-events:none}
+.circle-cursor--inner{margin-left: -11px; margin-top: 10px; width: 6px; height: 6px; z-index: 500; background-color: red; border-radius: 5px;}
+.circle-cursor--outer{margin-left: -15px; margin-top: -15px; width: 26px; height: 26px; z-index: 500; border: 1px solid red; opacity: .5; transition: all .08s ease-out; border-radius: 20px;}    
+/* .circle-cursor{cursor: url('circle-cursor').auto !important;} */
+
+.main-container{max-width: 1500px !important; width: 100%; margin: 0 auto !important;}
+.detail-container{max-width: 1900px !important; width: 100%; margin: 0 auto !important;}
+
+.header-black ul > li > a{color: #000 !important;}
+.header-black .main-nav .nav-item a::before{color: #333 !important;}
+.black-hamberger span{background-color: #000 !important;}
+
+/* header */
+.header-wrap{padding: 30px; margin-top: 15px;}
+.header-wrap .nav{justify-content: center !important;}
+.header-wrap .col-md-2{align-self: center;} 
+.header-wrap .logo{font-size: 26px; font-weight: 600; color: #fff;} 
+.header-wrap .main-nav .nav-item{margin: 0 26px;}
+.header-wrap .main-nav .nav-item a{position: relative; color: #fff; font-weight: 600; font-size: 19px;}
+.header-wrap .nav{counter-reset: numbering; list-style-type: none;} 
+.header-wrap .main-nav .nav-item a::before{display: inline-block; position: absolute; counter-increment: numbering; content: "0"counter(numbering); width: auto; height: auto; left: 17px; top: -.2rem; font-size: 11px; color: #e1e1e1; opacity: .4;}
+
+/* hamberger */
+.hamberger{position: relative; width: 32px; height: 25px; margin-left: auto; cursor: pointer;}
+.hamberger span{position: absolute; display: inline-block; width: 100%; height: 2.6px; transition:all .4s; box-sizing: border-box; background-color: #fff; z-index: 1;}
+
+.hamberger span:nth-child(1){top: 0px; -webkit-transform-origin: left center; -moz-transform-origin: left center; -o-transform-origin: left center; transform-origin: left center;}
+.hamberger span:nth-child(2){top: 46%; -webkit-transform-origin: left center; -moz-transform-origin: left center; -o-transform-origin: left center; transform-origin: left center;}
+.hamberger span:nth-child(3){bottom: 0; -webkit-transform-origin: left center; -moz-transform-origin: left center; -o-transform-origin: left center; transform-origin: left center;}
+
+.hamberger.open span:nth-child(1) {-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg) ;-o-transform: rotate(45deg); transform: rotate(45deg); top: 0px; left: 3px}
+.hamberger.open span:nth-child(2) {width: 0%; opacity: 0;}
+.hamberger.open span:nth-child(3) {-webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); top: 23px; left: 3px;}
+
+.hamberger-menu{display: none; padding: 100px; position: absolute; width:100vw; height: 100vh; top: -15px; left: 0; background-color: #333; color: #fff; overflow: hidden; transition: transform 0.2s ease;}
+.hamberger-menu li>a{font-size: 80px; font-weight: 700; transition: all cubic-bezier(.4,0,.2,1).4s;}
+.hamberger-menu li>a:hover{color: yellowgreen !important;}
+
+/* scroll-top-btn */
+#toTop { cursor: pointer; position: fixed; right: 50px; bottom: 50px; font-weight: bold; background: #fff; color: #000; z-index: 45;}
+.iconbutton { padding-top: 16px; background: #fff; border-radius: 50%; border: 0; width: 60px; height: 60px; text-align: center; line-height: 40px; font-size: 16px;}
+
+/* contents-1-wrap */
+.contents-1-wrap{position: relative; height: 100vh; background-color: #111; overflow: hidden !important;} 
+.contents-1-wrap .bg-text-group{position: absolute; transform: rotate(-30deg) translateY(-50%); top:30%; left: 12%; font-size: 580px; line-height: 34rem; font-weight: 900; color: #222; z-index: 1;}
+.contents-1-wrap .text-group{position: absolute; z-index: 2; top: 35%;}
+.contents-1-wrap .text-group span{font-size: 24px; color: #e1e1e1;}
+.contents-1-wrap .text-group h1{font-size: 80px; font-weight: 700; line-height: 5.5rem; color: #fff;}
+.contents-1-wrap .text-group p{display: inline-block; margin-bottom: 0px; color: #fff; font-size: 17px; overflow: hidden !important;}
+
+h1.typing-txt{position:relative; display: inline-block; height: 95px; overflow: hidden;animation: typingAni 1s steps(15, end) 1;}
+h1.typing-txt::after{ position:absolute; display:inline-block; content:"";  width: 20px;  height: 95px; top : 3px; right:0;  border-right: 1px solid #fff; animation: cursor 1s step-end infinite;}
+@keyframes typingAni { 0%{width:0%} 100%{width: 150px}; }
+@keyframes cursor{ 0%{opacity:0;} 50%{opacity:1;} 100%{opacity:0;} }
+
+/* contents-2-wrap */
+.contents-2-wrap{background-color: #000; height: 100%;}
+.contents-2-wrap .row:nth-child(1){position: relative; top: -150px; width: 100%; max-width: 1500px; z-index: 100;}
+.contents-2-wrap .img-box{ width: 100%; height: 450px; background-color: #555; border-radius: 6px;}
+
+
+/* contents-5-wrap */
+.contents-5-wrap{padding: 100px 0; background-image: url(/assets/img/ant-rozetsky-HXOllTSwrpM-unsplash.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;}
+.contents-5-wrap .box{padding: 75px 30px; background-color: #222; border-radius: 8px;}
+.contents-5-wrap .box .pf{width: 60px; height: 60px; border-radius: 500%; background-color: #555; margin-bottom: 24px; background-image: url(/assets/img/FigmaIcon.png); background-size: 50%; background-repeat: no-repeat; background-position: center;}
+.contents-5-wrap .box h6{color: #fff;}
+.contents-5-wrap .box p{color: #888;}
+.slide-nav-bar{display: inline-block !important; margin-left: auto;}
+.slide-nav-bar .btn-box{border-radius: 500%; background-color: #333; padding: 11px 12px 6px 12px;}
+
+/* contents-6-wrap */
+.contents-6-wrap{background-color: #222; color: #fff; background-image: url(/assets/img/oh_bg-min.png); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;}
+.contents-6-wrap .list{padding: 80px 15px; border-bottom: 1px solid #333;}
+
+/* contents-7-wrap */
+.contents-7-wrap{height: 800px; background-image: url(/assets/img/dan-cristian-padure-9I2W5-7Kp4k-unsplash.jpg); background-size: cover; background-position: inherit; background-repeat: no-repeat; background-attachment: fixed;}
+
+/* contents-8-wrap */
+.contents-8-wrap{height: 100vh;}
+.contents-8-wrap .col-md-6{padding: 0px;}
+.contents-8-wrap .bg-left{background-color: #333; overflow: scroll; height: 100vh;}
+.contents-8-wrap .bg-left{ -ms-overflow-style: none; } .contents-8-wrap .bg-left::-webkit-scrollbar{ display:none; }
+.contents-8-wrap .bg-right div:nth-child(1){background-image: url(/assets/img/oh__img61.jpg); height: 50vh; background-position: center; background-size: cover;}
+.contents-8-wrap .bg-right div:nth-child(2){background-image: url(/assets/img/shutterstock_662594146.jpg); height: 50vh; background-position: center; background-size: cover;}
+
+/* footer */
+.footer{padding: 80px 0 30px 0; background-color: #111; color:#555;}
+.footer .logo{font-size: 25px; font-weight: 500; color: #fff !important;}
+.footer h5{color: #888; font-weight: 500; font-size: 24px;}
+.footer .list-group > li{font-size: 17px !important; margin-bottom: 10px;}
+
+
+/* project-wrap */
+.project-wrap .row {margin: 160px 0;}
+.project-wrap .project-nav .nav-item a{font-size: 22px; font-weight: 500; color: #e5e5e5;}
+.project-wrap .project-nav .active{color: #000 !important;}
+.project-wrap .project-main{width: 100%; height: 320px; border-radius: 8px; background-color: #e1e1e1;}
+.project-wrap .project-main::before{content: ''; display: block; width: 100%; height: 14px; background-color: #f1f1f1;}
+.project-wrap .project-main::after{content: ''; position: absolute; top: 5px; left: 28px; width: 4px; height: 4px; border-radius: 2px; background-color: #444;}
+.project-wrap .project-box .label{font-weight: 500; color: #555; font-size: 14px;}
+.project-wrap .project-box .title{font-size: 20px; color: #000;}
+
+/* detail-wrap */
+.mt{margin-top: 80px;}
+.detail-wrap{overflow: hidden;}
+
+.project-banner .col-md-12{padding: 0px;}
+.project-banner .top-banner{height: 60vh; background-color: #e1e1e1;}
+
+.project-title span{font-weight: 500; color: #999;}
+.project-title h1{margin-top: 10px; font-size: 50px;}
+.project-title p{margin-top: 40px; font-size: 20px; line-height: 2.2rem;}
+
+.project-content-3{padding: 200px 0; background-color: #333;}
+
+/* progress */
+.progress { background: rgba(0, 0, 0, 0.25); border-radius: 6px; box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);}
+.progress-bar {	height: 18px; background-color: #ee303c;  border-radius: 4px; transition: 0.4s linear;}
+.progress-striped .progress-bar {background-color: #444; width: 100%; animation: progressAnimationStrike 3s; border-radius: 40px;}
+@keyframes progressAnimationStrike {from { width: 0;} to{ width: 100%;}
+}
+
+
+/* contact */
+/* .contact-1{background-image: url(/assets/img/dan-cristian-padure-9I2W5-7Kp4k-unsplash.jpg); height: 50vh; background-size: cover; background-repeat: no-repeat;} */
+.contact {margin-top: 200px;}
+.contact h1{font-size: 80px; animation-name:title; animation-duration: 3s;}
+@keyframes title{
+  from{
+    margin-left:100%;
+    width: 150%;
+  }
+  to{
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.contact h2{font-weight: 600; font-weight: 700; margin-bottom: 24px;}
+.contact p{font-size: 20px; font-weight: 600;}
+.contact span{display: block; font-size: 18px; margin-bottom: 8px;}
+.contact .col-md-12:nth-child(2){margin-top: 100px;}
+
